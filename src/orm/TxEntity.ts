@@ -5,6 +5,7 @@ import BlockEntity from './BlockEntity'
 
 @Entity('tx')
 @Index('index_with_chainid_and_hash', ['chainId', 'hash'], { unique: true })
+@Index('index_with_chainid_and_id', ['chainId', 'id'])
 export default class TxEntity {
   @PrimaryGeneratedColumn()
   id: number
